@@ -2,7 +2,8 @@ function analyzeText() {
 
 const text = document.getElementById("paragraphInput").value;
 
-const totalChars = text.length; const words = text.match(/\b\w+\b/g) || []; 
+const totalChars = text.length; 
+const words = text.match(/\b\w+\b/g) || []; 
 const totalWords = words.length;
 const totalSentences = (text.match(/[.!?]/g) || []).length;
 
