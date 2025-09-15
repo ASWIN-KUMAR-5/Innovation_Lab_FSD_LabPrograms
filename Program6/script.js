@@ -1,11 +1,11 @@
-function addTasks() {
+function addTask() {
 
-    const taskinput = document.getElementById("input").value;
+    const taskText = document.getElementById("taskInput").value.trim();
 
-    if(taskinput!=""){
+    if(taskText==="") return;
 
-        let li = document.createElement("li");
-        li.textContent  = taskinput;
+        const li = document.createElement("li");
+        li.textContent  = taskText;
         
         li.addEventListener("click",function() {
             li.classList.toggle("completed");
@@ -21,10 +21,8 @@ function addTasks() {
         })
 
         li.appendChild(removeBtn);
-        document.getElementById("output").appendChild(li);
-        document.getElementById("input").value=""; 
+        document.getElementById("taskList").appendChild(li);
+        document.getElementById("taskInput").value=""; 
 
-    }
-
-    
 }
+    
